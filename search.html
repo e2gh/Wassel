@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+	Transit by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="ar" dir="rtl">
+	<head>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/midan-black" type="text/css"/>
+		<meta charset="UTF-8">
+		<title>وصل | نتائج البحث</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+        
+        
+        <script LANGUAGE="JavaScript">
+var item = new Array();
+
+/* Here is where all the magic happens. */
+
+// "Page Name","path","Page Title","Many,Key,Words","Descriptive Comments"
+
+c=0; item[c]=new Array("index.html","/Users/User/Desktop/wassl 1.0","وصل | الصفحة الرئيسية","index,main,start,home,front","Demonstration search engine data about an imagined but probable internet site.");
+c++; item[c]=new Array("about_us.html","","About Me","about,author,contact,email,who","Contact details and general information about the creator of the site and what the site is about.");
+c++; item[c]=new Array("contact_us.html","","Links page","links,more,where,similar,friends","Links to my favourite sites which I find interesting. Other friends sites which have similar interests to my own.");
+c++; item[c]=new Array("main.htm","main/","Main Page","content,main,focus","The main part of my site which contains what you have come to see. Lots of stuff like that and more great things. All in a sub directory.");
+c++; item[c]=new Array("logo.jpg","main/images/","Link Logo","link,image,logo,graphic","The logo.jpg is just a small image which you can place on your site as a link to me. It's in a second level subdirectory.");
+
+page="<html><head><title>Search Results</title></head><body bgcolor='white'><center><table border=0 cellspacing=10 width=80%>";
+
+
+function search(frm) {
+win = window.open("","","scrollbars");
+win.document.write(page);
+txt = frm.srchval.value.split(" ");
+fnd = new Array(); total=0;
+for (i = 0; i < item.length; i++) {
+fnd[i] = 0; order = new Array(0, 4, 2, 3);
+for (j = 0; j < order.length; j++)
+for (k = 0; k < txt.length; k++)
+if (item[i][order[j]].toLowerCase().indexOf(txt[k]) > -1 && txt[k] != "")
+fnd[i] += (j+1);
+}
+for (i = 0; i < fnd.length; i++) {
+n = 0; w = -1;
+for (j = 0;j < fnd.length; j++)
+if (fnd[j] > n) { n = fnd[j]; w = j; };
+if (w > -1) total += show(w, win, n);
+fnd[w] = 0;
+}
+win.document.write("</table><br>Total found: "+total+"<br></body></html>");
+win.document.close();
+}
+function show(which,wind,num) {
+link = item[which][1] + item[which][0]; 
+line = "<tr><td><a href='"+link+"'>"+item[which][2]+"</a> Score: "+num+"<br>";
+line += item[which][4] + "<br>"+link+"</td></tr>";
+wind.document.write(line);
+return 1;
+}
+//  End -->
+
+        
+	</script>
+    
+    		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+			<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+			<link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+		</noscript>
+	</head>
+	<body>
+	
+		<!-- Header -->
+			<header id="header">
+            <nav id="nav">
+					<ul style="font-family:MidanBlack">
+                    <li><a href="index.html"><img src="images/logo.png" alt=""/></a></li>
+						<li><a href="index.html"> الصفحة الرئيسية</a></li>
+						<li><a href="about_us.html">عن وصل</a></li>
+						<li><a href="Organization.html">المنظمات</a></li>
+                        <li><a href="volunteer.html">المتطوعون</a></li>
+                        <li><a href="contact_us.html">تواصل معنا</a></li>
+						<li><a href="sign_up.html" class="button special">تسجيل عضوية</a></li>
+                        <li><a href="sign_in.html" class="button special">تسجيل دخول</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- One -->
+	<section id="two" class="wrapper style2 special">
+    <br>
+    <br>
+    <p style="font-family:MidanBlack; font-size:30px; color:#7ca940"> ابحث في الموقع </p>
+    <i class="fa fa-search fa-5x" style="color:#7ca940"></i><br>
+    <br>
+   <div class="container 50%">
+<center>
+<form method="get" action="javascript:void(0)" onsubmit="search(this); return false;">
+<tr><td><input type="text" name="srchval" value=""><br>
+<input type="submit" value="Search" style="background-color:#7ca940"></td></tr>
+</form>
+
+</center>
+</div>
+	  </section>
+
+	
+		<!-- Footer -->
+	<footer id="footer">
+				<div class="container">
+ 
+ <table width="200">
+  <tbody>
+    <tr style="background-color:#383b43" bordercolor="#383b43">
+      <td><ul>
+      <li><a href="about_us.html">عن وصل</a></li> 
+			<li><a href="faq.html">الأسئلة الشائعة</a></li> 
+             <li><a href="contact_us.html">تواصل معنا</a></li>
+		</ul></td>
+        <td><ul>
+			<li><a href="Organization.html">المنظمات</a></li> 
+             <li><a href="volunteer.html">المتطوعون</a></li>
+             <li><a href="search.html">البحث في الموقع</a></li>
+             
+		</ul></td>
+      <td><ul class="icons"><h4>ابقَ على إطلاع على جديدنا</h4>
+							<li><a class="icon rounded fa-facebook"><span class="label">Facebook</span></a>
+							</li>
+							<li><a class="icon rounded fa-twitter"><span class="label">Twitter</span></a>
+							</li>
+					       <li><a class="icon rounded fa-google-plus"><span class="label">Google+</span></a>
+							</li> 
+							<li><a class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a>
+							</li></ul></td></tr>
+  </tbody>
+</table>
+<h5 style="color:white" align="left">  جميع الحقوق محفوظة لفريق تطوير وصل @ 2016</h5>
+				</div>
+			</footer>
+    
+	</body>
+</html>
